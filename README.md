@@ -18,10 +18,18 @@ $ tgwizard -list
 ```
 
 **Create a project**
+By default the storing solution will be RAM and the session will be the default.
 ```sh
 $ tgwizard -c ProjectName
 
 $ tgwizard -create-project ProjectName
+```
+You can specifying a valid DBMS (MySQL, Postgresql, DynamoDB, MongoDB, SQLite or RAM -  case insensitive) and/or
+a non default session approach (JWT or Default - case insensitive):
+```sh
+$ tgwizard -c ProjectName -db dynamodb -sess jwt
+
+$ tgwizard -create-project ProjectName -database dynamodb -session jwt
 ```
 **Create a Controller**
 ```sh
